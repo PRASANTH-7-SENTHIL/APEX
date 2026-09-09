@@ -1,4 +1,4 @@
-﻿module.exports = (req, res) => {
+module.exports = (req, res) => {
   const adminKey = process.env.ADMIN_KEY;
   if (adminKey && req.headers['x-admin-key'] !== adminKey) {
     return res.status(401).json({ error: 'Unauthorized' });
