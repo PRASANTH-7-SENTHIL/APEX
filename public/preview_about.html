@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX INFRASTRUCTURE — About Architectural View</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+  <style>
+    body { padding-top: 72px; }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="#about" class="nav-logo" aria-label="APEX INFRASTRUCTURE Home">
+    <span class="logo-gold">APEX</span> <span class="logo-white">INFRASTRUCTURE</span>
+  </a>
+  <ul id="nav-menu" role="list">
+    <li><a href="#about" class="active">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#why-apex">Why Apex</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     ABOUT SECTION (Visual Source of Truth)
+═══════════════════════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-container">
+    <div class="about-hero-grid">
+
+      <!-- LEFT COLUMN: Architectural Building Visualization (Reference Image) -->
+      <div class="about-visual-col revealed">
+        <div class="about-visual-card">
+          <img src="/images/about_building.png" alt="APEX INFRASTRUCTURE Headquarters Architectural Visualization" class="about-visual-img" />
+          <div class="about-visual-overlay"></div>
+          
+          <!-- Edge Indicator Rail (01 - 06 pagination with active gold ring) -->
+          <div class="about-visual-rail" aria-hidden="true">
+            <span class="rail-num">01</span>
+            <div class="rail-dots">
+              <span class="rail-dot"></span>
+              <span class="rail-dot active"><span class="dot-ring"></span></span>
+              <span class="rail-dot"></span>
+              <span class="rail-dot"></span>
+              <span class="rail-dot"></span>
+            </div>
+            <span class="rail-num">06</span>
+          </div>
+
+          <!-- Bottom-left architectural branding on image -->
+          <div class="about-watermark">
+            <span>BUILDING</span>
+            <span>STRONGER</span>
+            <span>TOMORROWS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Main Content + Stats & Mission/Vision -->
+      <div class="about-content-col">
+
+        <!-- Center Column: About Details & Core Feature Cards -->
+        <div class="about-editorial-col revealed">
+          <p class="about-gold-kicker">ABOUT APEX</p>
+          <h2 class="about-main-heading" id="about-heading">
+            Engineering a<br>
+            Better World, One<br>
+            Structure at a Time
+          </h2>
+          <div class="about-text-group">
+            <p class="about-lead">
+              APEX INFRASTRUCTURE is a premier civil construction, infrastructure development, structural engineering and consultancy company. Driven by a commitment to precision, quality, and innovation, we deliver complex built environments that stand as testaments to engineering excellence.
+            </p>
+            <p class="about-lead">
+              From conceptual design through final handover, we manage every facet of your project with a team of highly experienced engineers, architects, project managers, and quantity surveyors — bringing discipline, transparency, and technical mastery to every site.
+            </p>
+          </div>
+
+          <!-- 2x2 Feature Cards Grid (Thin Gold SVG Icons) -->
+          <div class="about-features-matrix">
+            <div class="feature-tile">
+              <div class="feature-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <polygon points="12 2 21 7.5 21 16.5 12 22 3 16.5 3 7.5 12 2"/>
+                  <circle cx="12" cy="12" r="3.5"/>
+                  <line x1="12" y1="2" x2="12" y2="6"/>
+                  <line x1="12" y1="18" x2="12" y2="22"/>
+                  <line x1="3" y1="7.5" x2="6.5" y2="9.5"/>
+                  <line x1="17.5" y1="14.5" x2="21" y2="16.5"/>
+                  <line x1="3" y1="16.5" x2="6.5" y2="14.5"/>
+                  <line x1="17.5" y1="9.5" x2="21" y2="7.5"/>
+                </svg>
+              </div>
+              <div class="feature-tile-content">
+                <h4 class="feature-tile-title">ENGINEERING EXCELLENCE</h4>
+                <p class="feature-tile-desc">Precision-engineered solutions backed by rigorous technical analysis.</p>
+              </div>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M3 21h18"/>
+                  <path d="M5 21V7l7-4 7 4v14"/>
+                  <path d="M9 10h1"/>
+                  <path d="M14 10h1"/>
+                  <path d="M9 14h1"/>
+                  <path d="M14 14h1"/>
+                  <path d="M9 18h1"/>
+                  <path d="M14 18h1"/>
+                </svg>
+              </div>
+              <div class="feature-tile-content">
+                <h4 class="feature-tile-title">CONSTRUCTION CAPABILITY</h4>
+                <p class="feature-tile-desc">Proven ability to deliver at scale — from villa to high-rise.</p>
+              </div>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <div class="feature-tile-content">
+                <h4 class="feature-tile-title">SAFETY FIRST</h4>
+                <p class="feature-tile-desc">Zero-compromise safety standards across all projects.</p>
+              </div>
+            </div>
+
+            <div class="feature-tile">
+              <div class="feature-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M12 3C8 3 4 7 4 12c0 3.5 2 6.5 5 8 0-4 1-8 3-10 2 2 3 6 3 10 3-1.5 5-4.5 5-8 0-5-4-9-8-9z"/>
+                  <line x1="12" y1="12" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <div class="feature-tile-content">
+                <h4 class="feature-tile-title">SUSTAINABILITY</h4>
+                <p class="feature-tile-desc">Green building practices for a better tomorrow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Far Right Column: 4 Stats + Mission & Vision -->
+        <div class="about-metrics-col revealed">
+          <!-- 2x2 Statistics Matrix -->
+          <div class="stats-architecture-grid">
+            <div class="stat-arch-cell">
+              <div class="stat-arch-value" data-target="250" data-suffix="+">250+</div>
+              <div class="stat-arch-label">PROJECTS<br>DELIVERED</div>
+            </div>
+            <div class="stat-arch-cell">
+              <div class="stat-arch-value" data-target="18" data-suffix="M+">18M+</div>
+              <div class="stat-arch-label">SQ FT BUILT</div>
+            </div>
+            <div class="stat-arch-cell">
+              <div class="stat-arch-value" data-target="99.8" data-suffix="%">99.8%</div>
+              <div class="stat-arch-label">ON-TIME<br>DELIVERY</div>
+            </div>
+            <div class="stat-arch-cell">
+              <div class="stat-arch-value" data-target="22" data-suffix="+">22+</div>
+              <div class="stat-arch-label">YEARS OF<br>EXCELLENCE</div>
+            </div>
+          </div>
+
+          <!-- Mission & Vision Panels -->
+          <div class="mv-editorial-stack">
+            <div class="mv-block">
+              <span class="mv-gold-tag">OUR MISSION</span>
+              <h3 class="mv-lead-title">Delivering Excellence on Every Project</h3>
+              <p class="mv-narrative">To deliver superior construction and engineering solutions through uncompromised quality, safety, innovation, and client partnership — creating lasting value for communities and stakeholders.</p>
+            </div>
+            <div class="mv-block">
+              <span class="mv-gold-tag">OUR VISION</span>
+              <h3 class="mv-lead-title">Shaping Tomorrow's Infrastructure Today</h3>
+              <p class="mv-narrative">To be India's most trusted and innovative infrastructure company — known for building the structures that define cities, connect communities, and create a better tomorrow.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Architectural Rail Bar -->
+    <div class="about-bottom-rail">
+      <a href="#services" class="about-scroll-prompt">
+        <span>SCROLL TO EXPLORE</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </a>
+      <div class="about-category-tags">
+        <span>PEOPLE</span>
+        <span class="tag-divider">/</span>
+        <span>PROJECTS</span>
+        <span class="tag-divider">/</span>
+        <span>PROGRESS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

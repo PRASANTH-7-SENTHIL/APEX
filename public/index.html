@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX INFRASTRUCTURE — Civil Construction, Engineering &amp; Consultancy</title>
+  <meta name="description" content="APEX INFRASTRUCTURE is a premier civil construction, infrastructure development, structural engineering and consultancy company. Building strong foundations for a better future." />
+  <meta name="keywords" content="civil construction, infrastructure development, structural engineering, architectural planning, quantity surveying, project management, engineering consultancy, APEX INFRASTRUCTURE" />
+  <meta property="og:title" content="APEX INFRASTRUCTURE" />
+  <meta property="og:description" content="Building Strong Foundations for a Better Future. Premium civil construction & engineering." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css?v=5" />
+</head>
+<body>
+
+
+<!-- ════════════════════════════════════════════════════════
+     PRELOADER — Full-screen loading overlay
+═══════════════════════════════════════════════════════════ -->
+<div id="preloader" role="status" aria-label="Loading experience">
+  <div class="loader-lines" aria-hidden="true"></div>
+  <div class="loader-brand">
+    <span>APEX</span> INFRASTRUCTURE
+  </div>
+  <div class="loader-track">
+    <div id="loader-bar"></div>
+  </div>
+  <div class="loader-info">
+    <span id="loader-text">LOADING EXPERIENCE</span>
+    <span>—</span>
+    <span id="loader-pct">0%</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     CINEMATIC INTRO — Scroll-pinned 3D animation zone
+═══════════════════════════════════════════════════════════ -->
+<div id="pin-container">
+  <!-- Sticky cinema wrapper — stays pinned at top while scrolling -->
+  <div id="cinema-wrapper">
+
+    <!-- Canvas renders 268-frame 3D animation -->
+    <canvas id="cinema-canvas" aria-hidden="true"></canvas>
+
+    <!-- Hero brand overlay — fades out as user scrolls -->
+    <div id="hero-brand-overlay" aria-hidden="true">
+      <div class="hero-brand-center">
+        <h2 class="hero-brand-title">
+          <span class="brand-gold">APEX</span>&nbsp;<span class="brand-white">INFRASTRUCTURE</span>
+        </h2>
+        <p class="hero-brand-tagline">
+          Civil Construction · Engineering · Consultancy
+        </p>
+        <div class="hero-brand-services">
+          <span>Civil Construction</span>
+          <span class="dot-sep">·</span>
+          <span>Infrastructure</span>
+          <span class="dot-sep">·</span>
+          <span>Structural Engineering</span>
+          <span class="dot-sep">·</span>
+          <span>Consultancy</span>
+        </div>
+      </div>
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span class="cue-text">Scroll to Explore</span>
+        <svg class="cue-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- HUD Overlays — architectural sequence labels -->
+    <div id="hud-overlay" aria-hidden="true">
+      <div id="hud-label"></div>
+      <div id="hud-sub"></div>
+    </div>
+
+    <!-- HUD corner badge -->
+    <div class="hud-corner" aria-hidden="true">
+      <span class="hud-brand">APEX · Infrastructure</span>
+      <div class="hud-line"></div>
+    </div>
+
+    <!-- HUD frame counter -->
+    <div id="hud-frame" aria-hidden="true">001 / 268</div>
+
+  </div><!-- /cinema-wrapper -->
+
+  <!-- Scroll spacer — height set by JS to create scroll travel -->
+  <div id="scroll-spacer"></div>
+</div><!-- /pin-container -->
+
+
+<!-- ════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="#about" class="nav-logo" aria-label="APEX INFRASTRUCTURE Home">
+    <span class="logo-gold">APEX</span> <span class="logo-white">INFRASTRUCTURE</span>
+  </a>
+  <ul id="nav-menu" role="list">
+    <li><a href="#about" class="active">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#why-apex">Why Apex</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button id="nav-burger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="scroll-progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     HERO / ABOUT — EXACT ARCHITECTURAL REFERENCE
+═══════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════
+     ABOUT SECTION — Split Layout: Building Image LEFT | Content RIGHT
+═══════════════════════════════════════════════════════════ -->
+<section id="about" class="about-split-section" aria-labelledby="about-main-heading">
+  <div class="about-split-wrapper">
+
+    <!-- LEFT PANEL: Building Image (no border, flush with right content) -->
+    <div class="about-image-panel">
+      <img
+        src="/images/about_building.png"
+        alt="APEX INFRASTRUCTURE Headquarters Architectural Visualization"
+        class="about-building-img"
+      />
+      <!-- Gradient veil that fades the right edge into the dark content panel -->
+      <div class="about-image-veil"></div>
+
+      <!-- Left Edge Vertical Architectural Rail -->
+      <div class="about-rail" aria-hidden="true">
+        <span class="about-rail-num">01</span>
+        <div class="about-rail-track">
+          <span class="about-rail-dot"></span>
+          <span class="about-rail-dot active"><span class="about-rail-ring"></span></span>
+          <span class="about-rail-dot"></span>
+          <span class="about-rail-dot"></span>
+          <span class="about-rail-dot"></span>
+        </div>
+        <span class="about-rail-num">06</span>
+      </div>
+
+      <!-- Bottom-left watermark -->
+      <div class="about-watermark" aria-hidden="true">
+        <span>BUILDING</span>
+        <span>STRONGER</span>
+        <span>TOMORROWS</span>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: About Content -->
+    <div class="about-content-panel">
+      <!-- Top kicker + heading -->
+      <div class="about-content-header">
+        <p class="about-gold-kicker">ABOUT APEX</p>
+        <h1 class="about-main-heading" id="about-main-heading">
+          Engineering a<br>
+          Better World, One<br>
+          Structure at a Time
+        </h1>
+        <div class="about-lead-group">
+          <p class="about-lead-text">
+            APEX INFRASTRUCTURE is a premier civil construction, infrastructure development, structural engineering and consultancy company. Driven by a commitment to precision, quality, and innovation, we deliver complex built environments that stand as testaments to engineering excellence.
+          </p>
+          <p class="about-lead-text">
+            From conceptual design through final handover, we manage every facet of your project with a team of highly experienced engineers, architects, project managers, and quantity surveyors — bringing discipline, transparency, and technical mastery to every site.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2×2 Feature Cards Grid -->
+      <div class="about-feature-matrix">
+        <div class="about-feature-card">
+          <div class="about-feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <polygon points="12 2 21 7.5 21 16.5 12 22 3 16.5 3 7.5 12 2"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+              <line x1="3" y1="7.5" x2="6.5" y2="9.5"/><line x1="17.5" y1="14.5" x2="21" y2="16.5"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="about-feature-title">ENGINEERING EXCELLENCE</h4>
+            <p class="about-feature-desc">Precision-engineered solutions backed by rigorous technical analysis.</p>
+          </div>
+        </div>
+
+        <div class="about-feature-card">
+          <div class="about-feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1M9 18h1M14 18h1"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="about-feature-title">CONSTRUCTION CAPABILITY</h4>
+            <p class="about-feature-desc">Proven ability to deliver at scale — from villa to high-rise.</p>
+          </div>
+        </div>
+
+        <div class="about-feature-card">
+          <div class="about-feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="about-feature-title">SAFETY FIRST</h4>
+            <p class="about-feature-desc">Zero-compromise safety standards across all projects.</p>
+          </div>
+        </div>
+
+        <div class="about-feature-card">
+          <div class="about-feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M12 3C8 3 4 7 4 12c0 3.5 2 6.5 5 8 0-4 1-8 3-10 2 2 3 6 3 10 3-1.5 5-4.5 5-8 0-5-4-9-8-9z"/>
+              <line x1="12" y1="12" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="about-feature-title">SUSTAINABILITY</h4>
+            <p class="about-feature-desc">Green building practices for a better tomorrow.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="about-stats-row">
+        <div class="about-stat-cell">
+          <div class="about-stat-value" data-target="250" data-suffix="+">250+</div>
+          <div class="about-stat-label">PROJECTS<br>DELIVERED</div>
+        </div>
+        <div class="about-stat-divider" aria-hidden="true"></div>
+        <div class="about-stat-cell">
+          <div class="about-stat-value" data-target="18" data-suffix="M+">18M+</div>
+          <div class="about-stat-label">SQ FT BUILT</div>
+        </div>
+        <div class="about-stat-divider" aria-hidden="true"></div>
+        <div class="about-stat-cell">
+          <div class="about-stat-value" data-target="99.8" data-suffix="%">99.8%</div>
+          <div class="about-stat-label">ON-TIME<br>DELIVERY</div>
+        </div>
+        <div class="about-stat-divider" aria-hidden="true"></div>
+        <div class="about-stat-cell">
+          <div class="about-stat-value" data-target="22" data-suffix="+">22+</div>
+          <div class="about-stat-label">YEARS OF<br>EXCELLENCE</div>
+        </div>
+      </div>
+
+      <!-- Mission & Vision -->
+      <div class="about-mv-row">
+        <div class="about-mv-card">
+          <span class="about-mv-tag">OUR MISSION</span>
+          <h3 class="about-mv-title">Delivering Excellence on Every Project</h3>
+          <p class="about-mv-text">To deliver superior construction and engineering solutions through uncompromised quality, safety, innovation, and client partnership — creating lasting value for communities and stakeholders.</p>
+        </div>
+        <div class="about-mv-card">
+          <span class="about-mv-tag">OUR VISION</span>
+          <h3 class="about-mv-title">Shaping Tomorrow's Infrastructure Today</h3>
+          <p class="about-mv-text">To be India's most trusted and innovative infrastructure company — known for building the structures that define cities, connect communities and create a better tomorrow.</p>
+        </div>
+      </div>
+
+      <!-- Scroll Prompt -->
+      <div class="about-scroll-bar">
+        <a href="#services" class="about-scroll-cue">
+          <span>SCROLL TO EXPLORE</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
+        </a>
+        <div class="about-ethos-tags">
+          <span>PEOPLE</span><span class="about-ethos-sep">/</span>
+          <span>PROJECTS</span><span class="about-ethos-sep">/</span>
+          <span>PROGRESS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SERVICES SECTION — Cinematic Reference Layout
+═══════════════════════════════════════════════════════════ -->
+<section id="services" class="services-cinematic" aria-labelledby="services-heading">
+
+  <!-- TOP HERO PANEL: Full-width background image with text overlay -->
+  <div class="svc-hero-panel">
+    <!-- Background Image -->
+    <img src="/images/project_infrastructure.jpg" alt="Infrastructure Bridge at Sunset" class="svc-hero-bg" />
+    <div class="svc-hero-gradient"></div>
+
+    <!-- Top-right vertical text watermark -->
+    <div class="svc-watermark-right" aria-hidden="true">
+      <span>BRIDGING</span>
+      <span>COMMUNITIES</span>
+      <span>BUILDING</span>
+      <span>FUTURES</span>
+    </div>
+
+    <!-- Left content overlay -->
+    <div class="svc-hero-content">
+      <p class="svc-kicker">
+        <span class="svc-kicker-line"></span>
+        OUR SERVICES
+      </p>
+      <h2 class="svc-hero-heading" id="services-heading">
+        Comprehensive Solutions<br>
+        <span class="svc-heading-gold">for a Stronger Tomorrow</span>
+      </h2>
+      <p class="svc-hero-sub">
+        From concept to completion, we deliver end-to-end infrastructure<br>
+        solutions with precision, innovation, and excellence.
+      </p>
+    </div>
+  </div>
+
+  <!-- BOTTOM CARDS PANEL: Horizontal scrollable service cards -->
+  <div class="svc-cards-panel">
+    <!-- Nav Arrow Left -->
+    <button class="svc-nav-btn svc-nav-prev" id="svc-prev" aria-label="Previous services">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+
+    <!-- Scrollable Track -->
+    <div class="svc-track-wrapper">
+      <div class="svc-track" id="svc-track">
+
+        <article class="svc-card" data-index="0">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">01</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1M9 18h1M14 18h1"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_civil_construction.jpg" alt="Civil Construction" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Civil Construction</h3>
+            <p class="svc-card-desc">Buildings, residential, commercial &amp; industrial projects.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="svc-card" data-index="1">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">02</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 19L9 5M20 19L15 5M12 5v4M12 15v4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_infrastructure.jpg" alt="Infrastructure Development" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Infrastructure Development</h3>
+            <p class="svc-card-desc">Roads, bridges, flyovers and urban infrastructure systems.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="svc-card" data-index="2">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">03</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 21h18L12 3 3 21zM9 21v-4h6v4M12 9v4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_structural.jpg" alt="Structural Engineering" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Structural Engineering</h3>
+            <p class="svc-card-desc">Analysis, design and structural solutions.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="svc-card" data-index="3">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">04</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 21h18M4 18h16M6 18V9M10 18V9M14 18V9M18 18V9M12 3L2 8h20l-10-5z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_architectural.jpg" alt="Architectural Planning" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Architectural Planning</h3>
+            <p class="svc-card-desc">Innovative and functional designs.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="svc-card" data-index="4">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">05</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M18 20V10M12 20V4M6 20v-6M3 20h18"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_quantity_surveying.jpg" alt="Quantity Surveying" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Quantity Surveying</h3>
+            <p class="svc-card-desc">Cost estimation and contract documentation.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="svc-card" data-index="5">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">06</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_project_management.jpg" alt="Project Management" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Project Management</h3>
+            <p class="svc-card-desc">Planning, execution and delivery.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+        <article class="svc-card" data-index="6">
+          <div class="svc-card-top">
+            <div class="svc-card-meta">
+              <span class="svc-num">07</span>
+              <div class="svc-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card-img-wrap">
+            <img src="/images/service_engineering_consultancy.jpg" alt="Engineering Consultancy" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-name">Engineering Consultancy</h3>
+            <p class="svc-card-desc">Expert advice for complex projects.</p>
+            <span class="svc-card-arrow">→</span>
+          </div>
+        </article>
+
+      </div><!-- /svc-track -->
+    </div><!-- /svc-track-wrapper -->
+
+    <!-- Nav Arrow Right -->
+    <button class="svc-nav-btn svc-nav-next" id="svc-next" aria-label="Next services">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+
+    <!-- Bottom label -->
+    <div class="svc-scroll-label" aria-hidden="true">SCROLLING SERVICES</div>
+  </div><!-- /svc-cards-panel -->
+
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PROJECTS SECTION
+═══════════════════════════════════════════════════════════ -->
+<section id="projects" aria-labelledby="projects-heading">
+
+  <!-- ── Hero Banner ─────────────────────────────────────── -->
+  <div class="prj-hero">
+    <div class="prj-hero-bg">
+      <img src="/images/project_commercial.jpg" alt="" aria-hidden="true" class="prj-hero-bgimg" />
+      <div class="prj-hero-veil"></div>
+    </div>
+    <div class="prj-hero-inner">
+
+      <!-- Left: Label + Heading + Desc -->
+      <div class="prj-hero-left">
+        <p class="prj-kicker">
+          <span class="prj-kicker-line"></span>
+          OUR PORTFOLIO
+          <span class="prj-kicker-line"></span>
+        </p>
+        <h2 class="prj-hero-heading" id="projects-heading">
+          Spaces That<br>
+          <span class="prj-heading-gold">Shape Tomorrow</span>
+        </h2>
+        <p class="prj-hero-desc">A selection of landmark projects that reflect our commitment<br>to engineering excellence and a better tomorrow.</p>
+
+        <!-- Stats row -->
+        <div class="prj-stats-row">
+          <div class="prj-stat">
+            <span class="prj-stat-value">250+</span>
+            <span class="prj-stat-label">PROJECTS<br>DELIVERED</span>
+          </div>
+          <div class="prj-stat-divider"></div>
+          <div class="prj-stat">
+            <span class="prj-stat-value">18M+</span>
+            <span class="prj-stat-label">SQ FT<br>BUILT</span>
+          </div>
+          <div class="prj-stat-divider"></div>
+          <div class="prj-stat">
+            <span class="prj-stat-value">99.8%</span>
+            <span class="prj-stat-label">ON-TIME<br>DELIVERY</span>
+          </div>
+          <div class="prj-stat-divider"></div>
+          <div class="prj-stat">
+            <span class="prj-stat-value">22+</span>
+            <span class="prj-stat-label">YEARS OF<br>EXCELLENCE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Vertical stacked words -->
+      <div class="prj-hero-right" aria-hidden="true">
+        <div class="prj-vert-words">
+          <span>BUILD</span>
+          <span>CONNECT</span>
+          <span>EMPOWER</span>
+          <span>SUSTAIN</span>
+          <span class="prj-vert-gold">TOMORROW</span>
+          <div class="prj-vert-line"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Filter Bar + Navigation ─────────────────────────── -->
+  <div class="prj-controls">
+    <div class="prj-filter-wrap">
+      <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="projects-grid">All Projects</button>
+        <button class="filter-btn" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+        <button class="filter-btn" data-filter="residential" role="tab" aria-selected="false">Residential</button>
+        <button class="filter-btn" data-filter="industrial" role="tab" aria-selected="false">Industrial</button>
+        <button class="filter-btn" data-filter="infrastructure" role="tab" aria-selected="false">Infrastructure</button>
+        <button class="filter-btn" data-filter="structural" role="tab" aria-selected="false">Structural</button>
+      </div>
+    </div>
+    <div class="prj-nav-wrap">
+      <button class="prj-nav-btn" id="prj-prev" aria-label="Previous projects">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="prj-nav-btn" id="prj-next" aria-label="Next projects">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <span class="prj-counter"><span id="prj-current">01</span> / <span id="prj-total">06</span></span>
+    </div>
+  </div>
+
+  <!-- ── Projects Grid ────────────────────────────────────── -->
+  <div class="projects-grid" id="projects-grid" role="list">
+
+    <article class="project-card" data-category="commercial" data-index="1"
+      data-name="Nexus Corporate Tower"
+      data-type="Commercial"
+      data-location="Hyderabad, Telangana"
+      data-desc="A 28-storey premium Grade-A office tower with curtain-wall glass facade, triple-height lobby atrium, and LEED Gold certification. Delivered in 36 months, this landmark project redefined the commercial skyline of Hyderabad's financial district."
+      role="listitem">
+      <div class="card-num">01</div>
+      <div class="card-img-wrap">
+        <img src="/images/project_commercial.jpg" alt="Nexus Corporate Tower – Commercial high-rise building in Hyderabad" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <p class="card-tag">COMMERCIAL</p>
+        <h3 class="card-title">Nexus Corporate Tower</h3>
+        <p class="card-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Hyderabad, Telangana
+        </p>
+        <p class="card-desc">28-storey Grade-A office tower with curtain-wall glass facade and LEED Gold certification.</p>
+        <button class="card-cta" aria-label="View Nexus Corporate Tower project details">VIEW PROJECT →</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="residential" data-index="2"
+      data-name="Aurora Residences"
+      data-type="Residential"
+      data-location="Kochi, Kerala"
+      data-desc="A luxury residential complex comprising 120 premium apartments across two towers, featuring a landscaped podium, infinity pool, gymnasium, and private cinema. Natural stone cladding, timber accents, and full smart-home integration define the interiors."
+      role="listitem">
+      <div class="card-num">02</div>
+      <div class="card-img-wrap">
+        <img src="/images/project_residential.jpg" alt="Aurora Residences – Luxury residential apartment complex in Kochi" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <p class="card-tag">RESIDENTIAL</p>
+        <h3 class="card-title">Aurora Residences</h3>
+        <p class="card-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Kochi, Kerala
+        </p>
+        <p class="card-desc">120-unit luxury residential complex with landscaped podium, infinity pool, and smart-home integration.</p>
+        <button class="card-cta" aria-label="View Aurora Residences project details">VIEW PROJECT →</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="infrastructure" data-index="3"
+      data-name="Kaveri River Crossing Bridge"
+      data-type="Infrastructure"
+      data-location="Karnataka, India"
+      data-desc="A 1.2 km cable-stayed bridge spanning the Kaveri River as part of the NH-275 expressway expansion. Engineered for heavy vehicular loads, flood conditions, and seismic resilience. Delivered 8 weeks ahead of schedule, this infrastructure project is a model of precision civil engineering."
+      role="listitem">
+      <div class="card-num">03</div>
+      <div class="card-img-wrap">
+        <img src="/images/project_infrastructure.jpg" alt="Kaveri River Crossing Bridge – Cable-stayed infrastructure bridge" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <p class="card-tag">INFRASTRUCTURE</p>
+        <h3 class="card-title">Kaveri River Crossing Bridge</h3>
+        <p class="card-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Karnataka, India
+        </p>
+        <p class="card-desc">1.2 km cable-stayed bridge engineered for heavy vehicular loads and seismic resilience.</p>
+        <button class="card-cta" aria-label="View Kaveri Bridge project details">VIEW PROJECT →</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="industrial" data-index="4"
+      data-name="Pinnacle Logistics Hub"
+      data-type="Industrial"
+      data-location="Pune, Maharashtra"
+      data-desc="A 480,000 sq ft multi-modal logistics and warehousing facility with 14-metre clear height, 42 dock levellers, solar rooftop PV system, and automated conveyor integration. Built to international industrial standards with a focus on operational efficiency and environmental responsibility."
+      role="listitem">
+      <div class="card-num">04</div>
+      <div class="card-img-wrap">
+        <img src="/images/project_industrial.jpg" alt="Pinnacle Logistics Hub – Industrial warehousing facility in Pune" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <p class="card-tag">INDUSTRIAL</p>
+        <h3 class="card-title">Pinnacle Logistics Hub</h3>
+        <p class="card-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Pune, Maharashtra
+        </p>
+        <p class="card-desc">480,000 sq ft multi-modal logistics facility with 42 dock levellers and rooftop solar PV system.</p>
+        <button class="card-cta" aria-label="View Pinnacle Logistics Hub project details">VIEW PROJECT →</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="structural" data-index="5"
+      data-name="Helix Convention Centre"
+      data-type="Structural"
+      data-location="Chennai, Tamil Nadu"
+      data-desc="A landmark convention and exhibition centre with a 120-metre long column-free exhibition hall supported by an innovative post-tensioned concrete shell roof structure. The engineering solution eliminated 64 columns to create unobstructed event space of over 18,000 sq ft."
+      role="listitem">
+      <div class="card-num">05</div>
+      <div class="card-img-wrap">
+        <img src="/images/project_structural.jpg" alt="Helix Convention Centre – Structural engineering masterpiece in Chennai" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <p class="card-tag">STRUCTURAL</p>
+        <h3 class="card-title">Helix Convention Centre</h3>
+        <p class="card-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Chennai, Tamil Nadu
+        </p>
+        <p class="card-desc">120-metre column-free exhibition hall with an innovative post-tensioned concrete shell roof.</p>
+        <button class="card-cta" aria-label="View Helix Convention Centre project details">VIEW PROJECT →</button>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="commercial" data-index="6"
+      data-name="Aurora Square — Mixed-Use Development"
+      data-type="Commercial"
+      data-location="Mumbai, Maharashtra"
+      data-desc="A mixed-use urban landmark comprising twin 42-storey residential towers above a 4-level luxury retail and dining podium. The reflecting pool entry plaza, rooftop sky lounge, and dramatic nighttime illumination make Aurora Square one of Mumbai's most recognisable new developments."
+      role="listitem">
+      <div class="card-num">06</div>
+      <div class="card-img-wrap">
+        <img src="/images/project_mixed_use.jpg" alt="Aurora Square – Mixed-use development in Mumbai" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <p class="card-tag">COMMERCIAL</p>
+        <h3 class="card-title">Aurora Square</h3>
+        <p class="card-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mumbai, Maharashtra
+        </p>
+        <p class="card-desc">Twin 42-storey towers above a luxury retail podium with reflecting pool and sky lounge.</p>
+        <button class="card-cta" aria-label="View Aurora Square project details">VIEW PROJECT →</button>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+<!-- Project Modal -->
+<div id="modal-overlay" role="presentation" aria-hidden="true"></div>
+<aside id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-header">
+    <div>
+      <p id="modal-type" aria-label="Project type"></p>
+      <h2 id="modal-title"></h2>
+    </div>
+    <button id="modal-close" aria-label="Close project details">✕</button>
+  </div>
+  <img id="modal-img" src="" alt="Project image" />
+  <div class="modal-body">
+    <p id="modal-location" aria-label="Project location"></p>
+    <p id="modal-desc" aria-label="Project description"></p>
+  </div>
+</aside>
+
+<!-- ════════════════════════════════════════════════════════
+     PROCESS SECTION — SPLIT EDITORIAL REFERENCE LAYOUT
+═══════════════════════════════════════════════════════════ -->
+<section id="process" class="process-split-section" aria-labelledby="process-heading">
+  <div class="process-split-wrapper">
+
+    <!-- LEFT PANEL: Construction Site Image with Engineers -->
+    <div class="process-image-panel">
+      <img
+        src="/images/process_construction.jpg"
+        alt="APEX Engineers and Project Managers reviewing structural blueprints at sunset"
+        class="process-bg-img"
+      />
+      <!-- Gradient veil overlay -->
+      <div class="process-image-veil"></div>
+
+      <!-- Left Vertical Edge Watermark -->
+      <div class="process-left-watermark" aria-hidden="true">
+        <span>BUILDING</span>
+        <span>IDEAS</span>
+        <span>INTO</span>
+        <span>REALITY</span>
+        <div class="process-watermark-line"></div>
+      </div>
+
+      <!-- Right Vertical Ghost Words on the image -->
+      <div class="process-right-watermark" aria-hidden="true">
+        <span>PEOPLING</span>
+        <span>PROCESS</span>
+        <span>PROGRESS</span>
+        <span>STRONGER</span>
+        <span>TOMORROW</span>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Process Content & 2x3 Grid -->
+    <div class="process-content-panel">
+      <!-- Section Header -->
+      <header class="process-header">
+        <p class="process-kicker">
+          <span class="process-kicker-line"></span>
+          HOW WE WORK
+          <span class="process-kicker-line"></span>
+        </p>
+        <h2 class="process-main-heading" id="process-heading">
+          Our Project <span class="process-gold-text">Process</span>
+        </h2>
+        <p class="process-sub-text">
+          A disciplined, transparent six-stage methodology that ensures every project is delivered with precision and confidence.
+        </p>
+      </header>
+
+      <!-- 2 Columns x 3 Rows Process Grid -->
+      <div class="process-step-grid">
+
+        <!-- Step 01: Plan -->
+        <article class="process-box" data-step="1">
+          <div class="process-box-header">
+            <span class="process-box-num">01 — PLAN</span>
+            <div class="process-box-icon" aria-hidden="true">
+              <!-- Document / Note icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-box-title">Plan</h3>
+          <p class="process-box-desc">
+            Site assessment, feasibility analysis, regulatory review, stakeholder alignment, and master programme development — laying the strategic groundwork for flawless execution.
+          </p>
+        </article>
+
+        <!-- Step 02: Design -->
+        <article class="process-box" data-step="2">
+          <div class="process-box-header">
+            <span class="process-box-num">02 — DESIGN</span>
+            <div class="process-box-icon" aria-hidden="true">
+              <!-- Pencil / Drafting icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-box-title">Design</h3>
+          <p class="process-box-desc">
+            Architectural concept, spatial planning, technical drawings, material specifications, and BIM coordination — translating vision into precise, buildable documentation.
+          </p>
+        </article>
+
+        <!-- Step 03: Engineer -->
+        <article class="process-box" data-step="3">
+          <div class="process-box-header">
+            <span class="process-box-num">03 — ENGINEER</span>
+            <div class="process-box-icon" aria-hidden="true">
+              <!-- Gear icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-box-title">Engineer</h3>
+          <p class="process-box-desc">
+            Structural analysis, MEP engineering, geotechnical investigation, value engineering, and peer review — ensuring every technical element is optimised for performance and safety.
+          </p>
+        </article>
+
+        <!-- Step 04: Construct -->
+        <article class="process-box" data-step="4">
+          <div class="process-box-header">
+            <span class="process-box-num">04 — CONSTRUCT</span>
+            <div class="process-box-icon" aria-hidden="true">
+              <!-- Hard Hat icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 18h20"></path>
+                <path d="M5 18v-4a7 7 0 0 1 14 0v4"></path>
+                <line x1="12" y1="7" x2="12" y2="12"></line>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-box-title">Construct</h3>
+          <p class="process-box-desc">
+            Mobilisation, procurement, construction execution, quality inspections, daily reporting, and proactive risk management — bringing plans to life with precision.
+          </p>
+        </article>
+
+        <!-- Step 05: Deliver -->
+        <article class="process-box" data-step="5">
+          <div class="process-box-header">
+            <span class="process-box-num">05 — DELIVER</span>
+            <div class="process-box-icon" aria-hidden="true">
+              <!-- Checkmark circle icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-box-title">Deliver</h3>
+          <p class="process-box-desc">
+            Commissioning, defect rectification, authority approvals, handover documentation, and client training — ensuring a seamless and successful project completion.
+          </p>
+        </article>
+
+        <!-- Step 06: Sustain -->
+        <article class="process-box" data-step="6">
+          <div class="process-box-header">
+            <span class="process-box-num">06 — SUSTAIN</span>
+            <div class="process-box-icon" aria-hidden="true">
+              <!-- Leaf / eco icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-box-title">Sustain</h3>
+          <p class="process-box-desc">
+            Post-handover maintenance programmes, warranty support, lifecycle management planning, and sustainability initiatives — building lasting value for the future.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Bottom Tagline in Process Panel -->
+      <footer class="process-panel-footer">
+        <div class="process-footer-line"></div>
+        <span class="process-footer-words">BUILD &nbsp;/&nbsp; DELIVER &nbsp;/&nbsp; SUSTAIN</span>
+      </footer>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     WHY APEX SECTION — EXACT REFERENCE DESIGN
+═══════════════════════════════════════════════════════════ -->
+<section id="why-apex" class="why-split-section" aria-labelledby="why-heading">
+  <div class="why-split-wrapper">
+
+    <!-- LEFT PANEL: Brand Pillars Content & 2-Col Grid -->
+    <div class="why-content-panel">
+      <!-- Header -->
+      <header class="why-header">
+        <p class="why-kicker">
+          WHY CHOOSE US
+          <span class="why-kicker-line"></span>
+        </p>
+        <h2 class="why-main-heading" id="why-heading">
+          The APEX<br>
+          <span class="why-gold-text">Advantage</span>
+        </h2>
+        <p class="why-sub-text">
+          Eight pillars of excellence that define how we approach every project, partnership, and client relationship.
+        </p>
+      </header>
+
+      <!-- 8 Pillars 2-Column Grid -->
+      <div class="why-pillars-grid">
+
+        <!-- Pillar 1: Engineering Excellence -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Gear / Engineering SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Engineering Excellence</h3>
+            <p class="why-pillar-desc">World-class engineering rigour applied to every structural and technical challenge.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Quality Construction -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Trophy SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path>
+              <path d="M6 4h12v5a6 6 0 0 1-12 0V4z"></path>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Quality Construction</h3>
+            <p class="why-pillar-desc">ISO-aligned quality management systems and rigorous testing to ensure the highest standards.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Safety First -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Shield SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Safety First</h3>
+            <p class="why-pillar-desc">Zero-harm culture with OHSAS-aligned safety frameworks and continuous monitoring.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 4: On-Time Delivery -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Clock SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">On-Time Delivery</h3>
+            <p class="why-pillar-desc">Meticulously planned schedules and proactive tracking to ensure milestones are always met.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 5: Experienced Professionals -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Hard hat / worker SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+              <path d="M9 3h6"></path>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Experienced Professionals</h3>
+            <p class="why-pillar-desc">A multidisciplinary team with over 18 years of industry experience.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 6: Sustainable Solutions -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Leaf SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Sustainable Solutions</h3>
+            <p class="why-pillar-desc">Green building design, low-carbon materials, and renewable energy integration.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 7: Transparent Management -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Bar chart / Stats SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Transparent Management</h3>
+            <p class="why-pillar-desc">Client-facing dashboards, open-book procurement, and clear communication at every stage.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 8: Client Satisfaction -->
+        <div class="why-pillar-item">
+          <div class="why-pillar-icon-box" aria-hidden="true">
+            <!-- Users / Community SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="why-pillar-body">
+            <h3 class="why-pillar-title">Client Satisfaction</h3>
+            <p class="why-pillar-desc">A 96% client retention rate, reflecting our genuine commitment to long-term partnerships.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer CTA Button & Tagline -->
+      <footer class="why-panel-footer">
+        <a href="#contact" class="why-cta-btn">
+          <span>PARTNER WITH APEX</span>
+          <span class="why-cta-arrow">→</span>
+        </a>
+        <div class="why-footer-meta">
+          <div class="why-footer-line"></div>
+          <span class="why-footer-tagline">BUILDING A STRONGER TOMORROW</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- RIGHT PANEL: Handshake Visualization with Editorial Framing -->
+    <div class="why-visual-panel">
+      <img
+        src="/images/why_apex_handshake.jpg?v=2"
+        alt="APEX executive and partner shaking hands"
+        class="why-bg-img"
+      />
+
+      <!-- Angular Diagonal Framing Overlays -->
+      <div class="why-frame-left" aria-hidden="true"></div>
+      <div class="why-frame-right" aria-hidden="true"></div>
+
+      <!-- Top Center Core Message -->
+      <div class="why-center-quote" aria-hidden="true">
+        <span>T R U S T</span>
+        <span>B U I L D S</span>
+        <span>S T R O N G E R</span>
+        <span>T O M O R R O W S</span>
+        <div class="why-quote-gold-line"></div>
+      </div>
+
+      <!-- Top Right Ghost Typography -->
+      <div class="why-corner-top-right" aria-hidden="true">
+        <span>PEOPLE</span>
+        <span>PARTNERSHIP</span>
+        <span>PROGRESS</span>
+        <span>GROWTH</span>
+        <div class="why-corner-line"></div>
+      </div>
+
+      <!-- Bottom Left Ghost Typography -->
+      <div class="why-corner-bottom-left" aria-hidden="true">
+        <span>IDEAS</span>
+        <span>SOLUTIONS</span>
+        <span>REAL IMPACT</span>
+        <div class="why-corner-line"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     CONTACT / QUOTE SECTION
+═══════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Intro -->
+      <div>
+        <h2 class="contact-heading" id="contact-heading" data-reveal>
+          LET'S
+          <span>BUILD SOMETHING</span>
+          GREAT
+        </h2>
+        <p class="contact-intro" data-reveal data-delay="1">
+          Share your project vision with us. Our expert team will review your requirements and respond with a tailored proposal within 48 hours.
+        </p>
+        <div class="contact-info" data-reveal data-delay="2">
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">📍</div>
+            <div>
+              <p class="contact-info-label">Headquarters</p>
+              <p class="contact-info-val">APEX INFRASTRUCTURE, Civil Lines,<br>Hyderabad — 500 001, Telangana, India</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">📞</div>
+            <div>
+              <p class="contact-info-label">Phone</p>
+              <p class="contact-info-val">+91 40 1234 5678</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">✉️</div>
+            <div>
+              <p class="contact-info-label">Email</p>
+              <p class="contact-info-val">enquiries@apexinfrastructure.in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="quote-form-card" data-reveal data-delay="1">
+        <div class="quote-form-header">
+          <h3 class="quote-form-title">Request a Quote</h3>
+          <p class="quote-form-sub">All fields marked * are required. We respond within 48 hours.</p>
+        </div>
+
+        <form id="quote-form" novalidate aria-label="Request a quote form">
+
+          <!-- B) Name -->
+          <div class="form-field">
+            <label for="field-name">Name *</label>
+            <input id="field-name" name="name" type="text" placeholder="Your full name" required autocomplete="name" />
+          </div>
+
+          <!-- C) Phone Number -->
+          <div class="form-field">
+            <label for="field-phone">Phone Number *</label>
+            <input id="field-phone" name="phone" type="tel" placeholder="+91 98765 43210" required autocomplete="tel" />
+          </div>
+
+          <!-- D) Mail ID -->
+          <div class="form-field">
+            <label for="field-email">Mail ID *</label>
+            <input id="field-email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
+          </div>
+
+          <!-- E) Company Name (Optional) -->
+          <div class="form-field">
+            <label for="field-company">Company Name <span class="field-opt">(Optional)</span></label>
+            <input id="field-company" name="company" type="text" placeholder="Your company name" autocomplete="organization" />
+          </div>
+
+          <!-- F) Project Type -->
+          <div class="form-field">
+            <label for="field-project-type">Project Type *</label>
+            <select id="field-project-type" name="projectType" required>
+              <option value="" disabled selected>Select project type…</option>
+              <option value="Commercial Building">Commercial Building</option>
+              <option value="Residential Building">Residential Building</option>
+              <option value="Industrial Project">Industrial Project</option>
+              <option value="Infrastructure Project">Infrastructure Project</option>
+              <option value="Structural Project">Structural Project</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- G) Project Location -->
+          <div class="form-field">
+            <label for="field-location">Project Location *</label>
+            <input id="field-location" name="projectLocation" type="text" placeholder="City, State, India" required />
+          </div>
+
+          <!-- H) Estimation Budget -->
+          <div class="form-field full">
+            <label for="field-budget">Estimation Budget *</label>
+            <input id="field-budget" name="estimatedBudget" type="text" placeholder="e.g. ₹50L - ₹1Cr" required />
+          </div>
+
+          <div id="form-error-banner" role="alert" aria-live="assertive"></div>
+
+          <div class="form-submit-row">
+            <button id="btn-submit" class="btn-submit" type="submit">
+              <span>REQUEST A QUOTE</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Success Overlay -->
+<div id="success-overlay" role="dialog" aria-modal="true" aria-labelledby="success-title" aria-hidden="true">
+  <div class="success-card">
+    <div class="success-icon" aria-hidden="true">✓</div>
+    <h2 class="success-title" id="success-title">Thank You!</h2>
+    <p class="success-sub">Your enquiry has been successfully submitted to APEX INFRASTRUCTURE.</p>
+    <div class="submission-id-box">
+      <span class="submission-id-label">Submission ID:</span>
+      <span id="display-submission-id" class="submission-id-val">APX-0001</span>
+    </div>
+    <p class="success-note">Please keep this Submission ID for future communication.</p>
+    <div class="success-actions">
+      <button id="success-close" class="btn-success-close" type="button">Back to Home</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand-name"><span>APEX</span> INFRASTRUCTURE</p>
+        <p class="footer-tagline">Building Strong Foundations for a Better Future. Civil construction, infrastructure development, structural engineering, and consultancy — delivering excellence across India.</p>
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social" aria-label="Twitter/X">𝕏</a>
+          <a href="#" class="footer-social" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="#services">Civil Construction</a></li>
+          <li><a href="#services">Infrastructure Development</a></li>
+          <li><a href="#services">Structural Engineering</a></li>
+          <li><a href="#services">Architectural Planning</a></li>
+          <li><a href="#services">Quantity Surveying</a></li>
+          <li><a href="#services">Project Management</a></li>
+          <li><a href="#services">Engineering Consultancy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Projects</p>
+        <ul>
+          <li><a href="#projects">Commercial Buildings</a></li>
+          <li><a href="#projects">Residential Buildings</a></li>
+          <li><a href="#projects">Industrial Projects</a></li>
+          <li><a href="#projects">Infrastructure Projects</a></li>
+          <li><a href="#projects">Structural Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Company</p>
+        <ul>
+          <li><a href="#about">About APEX</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#why-apex">Why APEX</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#contact">Request a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 APEX INFRASTRUCTURE. All rights reserved.</p>
+      <p class="footer-credits">Excellence in Engineering &amp; Construction</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/js/frame-engine.js" defer></script>
+<script src="/js/app.js" defer></script>
+</body>
+</html>
