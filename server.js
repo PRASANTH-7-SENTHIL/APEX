@@ -1,9 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
 const path = require('path');
-const https = require('https');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,40 +19,30 @@ app.use(express.static(path.join(__dirname, 'public'), {
   }
 }));
 
-// Ensure data directory exists
-const DATA_DIR = path.join(__dirname, 'data');
-const ENQUIRIES_FILE = path.join(DATA_DIR, 'enquiries.json');
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-if (!fs.existsSync(ENQUIRIES_FILE)) fs.writeFileSync(ENQUIRIES_FILE, JSON.stringify([], null, 2));
+// In-memory enquiry store (avoids read-only filesystem errors on Vercel / serverless)
+const localEnquiries = [];
 
-// Helper: Generate next unique APX-XXXX submission ID from local storage
+// Helper: Generate next unique APX-XXXX submission ID from local store
 function generateLocalSubmissionId() {
-  try {
-    const enquiries = JSON.parse(fs.readFileSync(ENQUIRIES_FILE, 'utf-8'));
-    let maxNum = 0;
-    enquiries.forEach(item => {
-      const match = String(item.submissionId || '').match(/^APX-(\d+)$/i);
-      if (match) {
-        const num = parseInt(match[1], 10);
-        if (num > maxNum) maxNum = num;
-      }
-    });
-    const nextNum = maxNum + 1;
-    return 'APX-' + String(nextNum).padStart(4, '0');
-  } catch (e) {
-    return 'APX-0001';
-  }
+  let maxNum = 0;
+  localEnquiries.forEach(item => {
+    const match = String(item.submissionId || '').match(/^APX-(\d+)$/i);
+    if (match) {
+      const num = parseInt(match[1], 10);
+      if (num > maxNum) maxNum = num;
+    }
+  });
+  const nextNum = maxNum + 1;
+  return 'APX-' + String(nextNum).padStart(4, '0');
 }
 
-// Helper: Save enquiry locally
+// Helper: Save enquiry in-memory
 function saveEnquiry(data) {
   try {
-    const enquiries = JSON.parse(fs.readFileSync(ENQUIRIES_FILE, 'utf-8'));
-    enquiries.push({ ...data, receivedAt: new Date().toISOString() });
-    fs.writeFileSync(ENQUIRIES_FILE, JSON.stringify(enquiries, null, 2));
+    localEnquiries.push({ ...data, receivedAt: new Date().toISOString() });
     return true;
   } catch (e) {
-    console.error('Error saving enquiry locally:', e.message);
+    console.error('Error saving enquiry:', e.message);
     return false;
   }
 }
@@ -198,12 +186,7 @@ app.get('/api/quotes', (req, res) => {
   if (adminKey && req.headers['x-admin-key'] !== adminKey) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
-  try {
-    const enquiries = JSON.parse(fs.readFileSync(ENQUIRIES_FILE, 'utf-8'));
-    res.json({ count: enquiries.length, enquiries });
-  } catch {
-    res.status(500).json({ error: 'Could not read enquiries.' });
-  }
+  res.json({ count: localEnquiries.length, enquiries: localEnquiries });
 });
 
 // Fallback to index.html for SPA routing
@@ -211,11 +194,14 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`\n🏗️  APEX INFRASTRUCTURE Server running at http://localhost:${PORT}`);
-  console.log(`📁  Frames served from: /frames/frame_000001.png ... frame_000268.png`);
-  console.log(`📋  Enquiries logged to: ${ENQUIRIES_FILE}`);
-  if (!process.env.GOOGLE_SHEETS_WEBHOOK_URL) {
-    console.log(`⚠️   Google Sheets not configured. Set GOOGLE_SHEETS_WEBHOOK_URL in .env to enable.`);
-  }
-});
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n🏗️  APEX INFRASTRUCTURE Server running at http://localhost:${PORT}`);
+    console.log(`📁  Frames served from: /frames/frame_000001.png ... frame_000268.png`);
+    if (!process.env.GOOGLE_SHEETS_WEBHOOK_URL) {
+      console.log(`⚠️   Google Sheets not configured. Set GOOGLE_SHEETS_WEBHOOK_URL in .env to enable.`);
+    }
+  });
+}
+
+module.exports = app;
