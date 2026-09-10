@@ -3,10 +3,19 @@
  * APEX INFRASTRUCTURE — Google Apps Script Web App
  * ============================================================================
  * 
- * Google Sheet ID: 1hRUWN2PW-Tglf9a_6ZyrZlAM3sEPi3yBUtSpzLTUnPk
- * Google Sheet URL: https://docs.google.com/spreadsheets/d/1hRUWN2PW-Tglf9a_6ZyrZlAM3sEPi3yBUtSpzLTUnPk/edit
+ * QUICK SETUP:
+ * 1. Open your Google Sheet in your web browser.
+ * 2. Click "Extensions" > "Apps Script".
+ * 3. Replace any code with this file and click Save.
+ * 4. Click "Deploy" > "New deployment" > Select "Web app".
+ *    - Execute as: "Me"
+ *    - Who has access: "Anyone"
+ * 5. Copy the generated Web App URL and use it in your .env or website.
  * 
- * EXACT GOOGLE SHEET COLUMNS:
+ * NOTE: When installed via Extensions > Apps Script, this script connects
+ * AUTOMATICALLY to your active Google Sheet. No sheet ID or link is required!
+ * 
+ * EXACT GOOGLE SHEET COLUMNS (Auto-created if sheet is blank):
  * A: Submission ID
  * B: Name
  * C: Phone Number
@@ -25,7 +34,9 @@
  * ============================================================================
  */
 
-var SPREADSHEET_ID = '1hRUWN2PW-Tglf9a_6ZyrZlAM3sEPi3yBUtSpzLTUnPk';
+// OPTIONAL: Leave empty if you installed this via Extensions > Apps Script in your Google Sheet.
+// Only enter a Sheet ID if running as an independent standalone script project.
+var SPREADSHEET_ID = '';
 
 var SHEET_COLUMNS = [
   'Submission ID',
@@ -40,21 +51,45 @@ var SHEET_COLUMNS = [
 
 /**
  * Access the target spreadsheet and the first sheet/tab.
+ * Automatically uses the active spreadsheet when bound to a sheet,
+ * or falls back to SPREADSHEET_ID / Script Properties for standalone setups.
  */
 function getTargetSheet() {
-  var ss;
+  var ss = null;
+
+  // 1. Primary: Use the active spreadsheet (when opened via Extensions > Apps Script)
   try {
-    ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-  } catch (err) {
-    // If bound to the sheet directly, fallback to active spreadsheet
     ss = SpreadsheetApp.getActiveSpreadsheet();
+  } catch (err) {
+    // Not running as container-bound script
+  }
+
+  // 2. Secondary: Check explicit SPREADSHEET_ID variable if configured
+  if (!ss && typeof SPREADSHEET_ID === 'string' && SPREADSHEET_ID.trim().length > 0) {
+    try {
+      ss = SpreadsheetApp.openById(SPREADSHEET_ID.trim());
+    } catch (err) {
+      // Invalid or inaccessible ID
+    }
+  }
+
+  // 3. Tertiary: Check Script Properties (Project Settings > Script Properties)
+  if (!ss) {
+    try {
+      var propId = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID');
+      if (propId && propId.trim().length > 0) {
+        ss = SpreadsheetApp.openById(propId.trim());
+      }
+    } catch (err) {
+      // Property not found or invalid
+    }
   }
 
   if (!ss) {
-    throw new Error('Unable to access Google Sheet with ID: ' + SPREADSHEET_ID);
+    throw new Error('Unable to access Google Sheet. Please install this script directly inside your Google Sheet via Extensions > Apps Script, or specify SPREADSHEET_ID.');
   }
 
-  // Use the existing first sheet/tab as specified
+  // Use the existing first sheet/tab
   return ss.getSheets()[0];
 }
 
@@ -234,7 +269,6 @@ function doGet(e) {
     return createJsonResponse({
       status: 'ok',
       message: 'APEX INFRASTRUCTURE Google Sheets API is operational.',
-      spreadsheetId: SPREADSHEET_ID,
       totalRows: lastRow
     });
   } catch (err) {
