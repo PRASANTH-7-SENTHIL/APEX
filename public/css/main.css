@@ -2386,6 +2386,8 @@ ul { list-style: none; }
   margin-bottom: 4px;
 }
 .contact-info-val { font-size: 14px; color: var(--mist-2); }
+.contact-info-val a { color: inherit; transition: color var(--dur-fast) ease; }
+.contact-info-val a:hover { color: var(--gold); }
 
 /* Quote Form */
 .quote-form-card {
